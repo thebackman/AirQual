@@ -1,0 +1,6 @@
+.spyproject/
+__pycache__
+airlog.log
+*.db
+*.json
+one_time_get_all_dbdata.py
