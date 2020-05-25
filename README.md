@@ -1,4 +1,4 @@
-# AirStuff
+# AirQual
 
 Air quality monitoring with the raspberry pi.
 
