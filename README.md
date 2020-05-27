@@ -2,11 +2,11 @@
 
 Air quality monitoring with the raspberry pi.
 
- - calls the sensor some x random times a day
+ - calls the sensor hourly
  - stores the data in sqlite
- - sends a csv at the end of the day to dropbox
+ - Does not send a csv at the end of the day to dropbox, maybe implement as
+ separate job
  
- Now I can analyze it with R :-)
  
 # Note
  
