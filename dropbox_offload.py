@@ -65,33 +65,35 @@ def get_data_to_file(first_date, last_date, conn, proj_folder):
 
 ## RUN #########################################################################
 
-# -- pid
-
-pid = os.getpid()
-
-# -- today
-
-today = datetime.today().strftime('%Y-%m-%d')
-
-# -- get creds
-
-with open(CREDSPATH, 'r') as f:
-    creds = json.load(f)
+if __name__ == "__main__":
     
-# -- get data
+    # -- pid
     
-data_file = get_data_to_file(
-        first_date = today,
-        last_date = today,
-        conn = CONN,
-        proj_folder = PROJ_FOLDER)    
-
-# -- upload it
-
-upload_file(
-        accesstoken = creds["token"],
-        localfilepath = data_file,
-        remotefilename = f"/Airstuff/aggr_{today}_{pid}.csv",)
+    pid = os.getpid()
     
-# -- delete it
-os.remove(data_file)
+    # -- today
+    
+    today = datetime.today().strftime('%Y-%m-%d')
+    
+    # -- get creds
+    
+    with open(CREDSPATH, 'r') as f:
+        creds = json.load(f)
+        
+    # -- get data
+        
+    data_file = get_data_to_file(
+            first_date = today,
+            last_date = today,
+            conn = CONN,
+            proj_folder = PROJ_FOLDER)    
+    
+    # -- upload it
+    
+    upload_file(
+            accesstoken = creds["token"],
+            localfilepath = data_file,
+            remotefilename = f"/Airstuff/aggr_{today}_{pid}.csv",)
+        
+    # -- delete it
+    os.remove(data_file)
