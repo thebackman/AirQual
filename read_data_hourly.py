@@ -175,7 +175,7 @@ if __name__ == "__main__":
     
     # -- wake up sensor, poll, put it to sleep again
 
-    query_seconds(seconds = 60)
+    query_seconds(seconds = 25)
     
     # -- end and release the logging
 
