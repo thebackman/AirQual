@@ -21,7 +21,6 @@ import dropbox
 import json
 import pandas as pd
 
-
 # -- paths
 
 PROJ_FOLDER = "/home/pi/Projects/AirStuff"
