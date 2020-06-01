@@ -5,7 +5,7 @@
 
 
 # sudo crontab -e
-# 30 23 * * * python3 /home/pi/Projects/AirStuff/daily_dropbox_offload.py
+# 30 23 * * * python3 /home/pi/Projects/AirStuff/dropbox_offload.py
 # in english, at 23:30 every day (when all sensor values are taken)
 
 
